@@ -10,14 +10,15 @@ export default class Header extends Component {
             source={require("../img/baseline_expand_more_white_18dp.png")}
           />
         </TouchableOpacity>
+        <Text style={styles.message}>PLAYING FROM CHARTS</Text>
         <TouchableOpacity>
           <Image
+            style={styles.image}
             source={require("../img/baseline_queue_music_white_18dp.png")}
           />
         </TouchableOpacity>
       </View>
     );
-    rr;
   }
 }
 
@@ -27,5 +28,12 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center"
+  },
+  message: {
+    color: "white"
+  },
+  image: {
+    width: 30,
+    height: 30
   }
 });

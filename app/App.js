@@ -3,13 +3,14 @@ import { StyleSheet, Text, View } from "react-native";
 
 import Header from "./Header";
 import AlbumArt from "./AlbumArt";
-
+import TrackDetails from "./TrackDetails";
 export default class App extends Component {
   render() {
     return (
       <View style={styles.app}>
         <Header />
         <AlbumArt />
+        <TrackDetails />
       </View>
     );
   }

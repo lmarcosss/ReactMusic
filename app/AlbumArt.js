@@ -1,16 +1,27 @@
 import React, { Component } from "react";
-import { Text, View, StyleSheet } from "react-native";
+import { View, StyleSheet, Image } from "react-native";
 
 export default class AlbumArt extends Component {
   render() {
     return (
-      <View>
-        <Text style={styles.text}> textInComponent </Text>
+      <View style={styles.albumContainer}>
+        <Image
+          style={styles.image}
+          source={require("../img/kingsOfLeon.jpg")}
+        />
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  text: {}
+  albumContainer: {
+    alignItems: "center",
+    marginTop: 20
+  },
+
+  image: {
+    width: 370,
+    height: 370
+  }
 });
