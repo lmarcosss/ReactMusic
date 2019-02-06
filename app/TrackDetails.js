@@ -14,7 +14,7 @@ export default class TrackDetails extends Component {
         <Text style={styles.message}>Kings of Leon</Text>
         <TouchableOpacity>
           <Image
-            style={styles.image}
+            style={styles.imageMenu}
             source={require("../img/baseline_more_horiz_white_18dp.png")}
           />
         </TouchableOpacity>
@@ -33,6 +33,13 @@ const styles = StyleSheet.create({
   image: {
     width: 30,
     height: 30
+  },
+  imageMenu: {
+    width: 25,
+    height: 25,
+    borderRadius: 20,
+    borderWidth: 2.5,
+    borderColor: "white"
   },
   message: {
     color: "white",
