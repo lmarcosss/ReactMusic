@@ -11,7 +11,10 @@ export default class TrackDetails extends Component {
             source={require("../img/baseline_add_circle_outline_white_18dp.png")}
           />
         </TouchableOpacity>
-        <Text style={styles.message}>Kings of Leon</Text>
+        <View>
+          <Text style={styles.band}>Kings of Leon</Text>
+          <Text style={styles.music}>Sex on Fire</Text>
+        </View>
         <TouchableOpacity>
           <Image
             style={styles.imageMenu}
@@ -27,22 +30,30 @@ const styles = StyleSheet.create({
   containerTrack: {
     flexDirection: "row",
     justifyContent: "space-between",
+    alignItems: "center",
     padding: 10,
     marginTop: 20
   },
   image: {
     width: 30,
-    height: 30
+    height: 30,
+    opacity: 0.7
   },
   imageMenu: {
     width: 25,
     height: 25,
     borderRadius: 20,
     borderWidth: 2.5,
-    borderColor: "white"
+    borderColor: "white",
+    opacity: 0.7
   },
-  message: {
+  band: {
     color: "white",
     fontSize: 20
+  },
+  music: {
+    color: "gray",
+    fontSize: 20,
+    textAlign: "center"
   }
 });
