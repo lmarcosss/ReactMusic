@@ -7,14 +7,15 @@ export default class Header extends Component {
       <View style={styles.container}>
         <TouchableOpacity>
           <Image
-            source={require("../img/baseline_expand_more_white_18dp.png")}
+            style={styles.image}
+            source={require("../img/baseline_expand_more_white_48dp.png")}
           />
         </TouchableOpacity>
         <Text style={styles.message}>PLAYING FROM CHARTS</Text>
         <TouchableOpacity>
           <Image
             style={styles.image}
-            source={require("../img/baseline_queue_music_white_18dp.png")}
+            source={require("../img/baseline_queue_music_white_48dp.png")}
           />
         </TouchableOpacity>
       </View>
@@ -33,7 +34,7 @@ const styles = StyleSheet.create({
     color: "white"
   },
   image: {
-    width: 30,
-    height: 30
+    width: 40,
+    height: 40
   }
 });

@@ -8,7 +8,7 @@ export default class TrackDetails extends Component {
         <TouchableOpacity>
           <Image
             style={styles.image}
-            source={require("../img/baseline_add_circle_outline_white_18dp.png")}
+            source={require("../img/baseline_add_white_48dp.png")}
           />
         </TouchableOpacity>
         <View>
@@ -18,7 +18,7 @@ export default class TrackDetails extends Component {
         <TouchableOpacity>
           <Image
             style={styles.imageMenu}
-            source={require("../img/baseline_more_horiz_white_18dp.png")}
+            source={require("../img/baseline_more_horiz_white_48dp.png")}
           />
         </TouchableOpacity>
       </View>
@@ -37,15 +37,18 @@ const styles = StyleSheet.create({
   image: {
     width: 30,
     height: 30,
-    opacity: 0.7
-  },
-  imageMenu: {
-    width: 25,
-    height: 25,
+    opacity: 0.7,
     borderRadius: 20,
     borderWidth: 2.5,
-    borderColor: "white",
-    opacity: 0.7
+    borderColor: "white"
+  },
+  imageMenu: {
+    width: 30,
+    height: 30,
+    opacity: 0.7,
+    borderRadius: 20,
+    borderWidth: 2.5,
+    borderColor: "white"
   },
   band: {
     color: "white",

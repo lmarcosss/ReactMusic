@@ -2,18 +2,30 @@ import React, { Component } from "react";
 import { View, TouchableOpacity, Image, StyleSheet } from "react-native";
 export default class PlayBackControls extends Component {
   state = {
-    playing: false
+    playing: false,
+    shuffle: false,
+    repeat: false
   };
   render() {
     playStop = this.state.playing
       ? require("../img/baseline_pause_white_18dp.png")
       : require("../img/baseline_play_arrow_white_18dp.png");
 
+    shuffle = this.state.shuffle
+      ? { ...styles.shuffleRepeat, ...styles.buttonActive }
+      : styles.shuffleRepeat;
+
+    repeat = this.state.repeat
+      ? { ...styles.shuffleRepeat, ...styles.buttonActive }
+      : styles.shuffleRepeat;
+
     return (
       <View style={styles.containerPlayback}>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => this.setState({ shuffle: !this.state.shuffle })}
+        >
           <Image
-            style={styles.shuffleRepeat}
+            style={shuffle}
             source={require("../img/baseline_shuffle_white_18dp.png")}
           />
         </TouchableOpacity>
@@ -35,9 +47,11 @@ export default class PlayBackControls extends Component {
             source={require("../img/baseline_skip_next_white_18dp.png")}
           />
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => this.setState({ repeat: !this.state.repeat })}
+        >
           <Image
-            style={styles.shuffleRepeat}
+            style={repeat}
             source={require("../img/baseline_repeat_white_18dp.png")}
           />
         </TouchableOpacity>
@@ -70,5 +84,8 @@ const styles = StyleSheet.create({
   shuffleRepeat: {
     width: 25,
     height: 25
+  },
+  buttonActive: {
+    tintColor: "#1abc9ca0"
   }
 });
